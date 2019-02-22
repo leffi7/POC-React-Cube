@@ -1,0 +1,73 @@
+// =============================================================================
+// MOBILE FIRST MEDIA QUERIES WITH <IE9 fallback
+// =============================================================================
+
+// @see https://github.com/jakearchibald/sass-ie
+$fix-mqs: false !default;
+
+// min width query
+@mixin mq-min($width) {
+	@if $fix-mqs {
+		@if $fix-mqs >= $width {
+			@content;
+		}
+	} @else {
+		@media screen and (min-width: $width) {
+			@content;
+		}
+	}
+}
+
+// max width query
+@mixin mq-max($width) {
+	@if $fix-mqs {
+		@if $fix-mqs <= ($width - 1) {
+			@content;
+		}
+	} @else {
+		@media screen and (max-width: ($width - 1)) {
+			@content;
+		}
+	}
+}
+
+// single breakpoint query
+@mixin mq($width) {
+	@if $fix-mqs {
+		@if $fix-mqs <= $width {
+			@content;
+		}
+	} @else {
+		@if (next-bp($width)) {
+			@media screen and (min-width: $width) and (max-width: next-bp($width)) {
+				@content;
+			}
+		} @else {
+			@media screen and (min-width: $width) {
+				@content;
+			}
+		}
+	}
+}
+
+// calculate next breakpoint
+@function next-bp($width) {
+	@if $width == $medium {
+		@return $large - 1;
+	}
+	@if $width == $large {
+		@return $xlarge - 1;
+	}
+	@if $width == $xlarge {
+		@return $xxlarge - 1;
+	}
+	@if $width == $xxlarge {
+		@return $max -1;
+	}
+	@if $width == $max {
+		@return false;
+	} @else {
+		@warn 'Invalid breakpoint';
+		@return false;
+	}
+}

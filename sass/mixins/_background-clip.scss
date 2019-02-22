@@ -1,0 +1,14 @@
+// http://compass-style.org/reference/compass/css3/background_clip/
+@mixin background-clip($clip: $default-background-clip) {
+	// webkit and mozilla use the deprecated short [border | padding]
+	$clip: unquote($clip);
+	$deprecated: $clip;
+	@if $clip == padding-box {
+		$deprecated: padding;
+	}
+	@if $clip == border-box {
+		$deprecated: border;
+	}
+	// Support for webkit and mozilla's use of the deprecated short form
+	background-clip: $clip;
+}

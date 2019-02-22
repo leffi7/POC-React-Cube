@@ -1,0 +1,12 @@
+// =============================================================================
+// BOX-SIZING
+// =============================================================================
+// http://compass-style.org/reference/compass/css3/box_sizing/
+
+@mixin box-sizing($bs) {
+	$bs: unquote($bs);
+
+	@if type-of($bs) == string {
+		box-sizing: $bs;
+	}
+}

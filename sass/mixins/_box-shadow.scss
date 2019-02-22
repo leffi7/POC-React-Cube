@@ -1,0 +1,11 @@
+@mixin box-shadow($shadow1, $shadow2: false, $shadow3: false, $shadow4: false, $fallback: true) {
+	$shadows: compact($shadow1, $shadow2, $shadow3, $shadow4);
+	box-shadow: $shadows;
+
+	@if $fallback == true {
+		// fallback for older browsers
+		.no-boxshadow & {
+			border: 1px solid $grey-lighter;
+		}
+	}
+}

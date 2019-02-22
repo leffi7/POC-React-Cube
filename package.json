@@ -1,0 +1,142 @@
+{
+  "name": "_STARTER",
+  "version": "1.0.0",
+  "description": "setup voor Jekyll, Gulp, SASS en BrowserSync",
+  "main": "gulpfile.js",
+  "author": "",
+  "browsersync": {
+    "baseDir": "_app"
+  },
+  "img": {
+    "src": "_app/assets/img/**/*",
+    "dest": "_app/assets/img/"
+  },
+  "fonts": {
+    "src": "_app/assets/fonts/**/*",
+    "dest": "_app/assets/fonts/"
+  },
+  "sass": {
+    "sourcemaps": "../maps",
+    "src": "./sass/app.scss",
+    "dest": "_app/assets/css/",
+    "hint": {
+      "src": [
+        "./sass/**/*.scss"
+      ]
+    },
+    "autoprefixer": {
+      "browsers": [
+        "Firefox >=27",
+        "Chrome >= 33",
+        "ie >= 9",
+        "Safari >= 7",
+        "iOS >= 7",
+        "Android >= 4.1"
+      ]
+    },
+    "uncss": {
+      "files": [
+        "**/*.html"
+      ],
+      "ignore": []
+    }
+  },
+  "js": {
+    "hint": {
+      "src": [
+        "./webpack/**/*.js"
+      ]
+    },
+    "webpack": {
+      "src": "./webpack/**/*",
+      "dest": "_app/assets/js"
+    }
+  },
+  "watch": {
+    "img": [
+      "_app/assets/img/**/*"
+    ],
+    "js": [
+      "./webpack/**/*.js"
+    ],
+    "css": [
+      "./sass/**/*.scss"
+    ],
+    "fonts": [
+      "_app/assets/fonts/**/*"
+    ],
+    "html": [
+      "./**/*.html",
+      "./robots.txt",
+      "./.htaccess"
+    ]
+  },
+  "clean": [
+    "_app/assets/**"
+  ],
+  "sitemap": {
+    "domain": "http://www.domain.com",
+    "src": "./**/*.html",
+    "dest": "."
+  },
+  "ftp": {
+    "host": "webftp.persgroep.be",
+    "user": "pdigital",
+    "password": "fTp4pDigital",
+    "folder": "/critical",
+    "base": "./_app/",
+    "globs": [
+      "_app/**/*"
+    ]
+  },
+  "critical": {
+    "src": "_app/*.html",
+    "base": "_app/",
+    "css": [
+      "_app/assets/css/app.css"
+    ],
+    "dimensions": [
+      {
+        "height": "320",
+        "width": "568"
+      },
+      {
+        "height": "1000",
+        "width": "1400"
+      }
+    ],
+    "dest": "_app"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "browser-sync": "^2.5.0",
+    "critical": "^0.7.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-copy": "0.0.2",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-eslint": "^0.9.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-scss-lint": "^0.3.9",
+    "gulp-sitemap": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uncss": "^1.0.4",
+    "gulp-util": "^3.0.4",
+    "gulp-webpack": "^1.5.0",
+    "imagemin-pngquant": "^4.1.0",
+    "json-loader": "^0.5.4",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-id-swiper": "^1.0.5",
+    "react-router": "^2.6.1",
+    "vinyl-ftp": "^0.4.0"
+  }
+}

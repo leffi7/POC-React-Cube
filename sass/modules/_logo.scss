@@ -1,0 +1,25 @@
+.main__logo {
+	display: block;
+	margin-top: 10px;
+	color: $white;
+
+	svg {
+		fill: currentColor;
+	}
+
+	.main__header--vk & {
+		width: 170px;
+	}
+
+	.main__header--vk-np & {
+		width: 150px;
+	}
+
+	.main__header--topics & {
+		width: 80px;
+	}
+
+	.main__header--services & {
+		width: 40px;
+	}
+}

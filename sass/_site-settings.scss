@@ -1,0 +1,172 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// _SITE-SETTINGS.SCSS
+//
+//  Declare all vars here
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+// font path
+$font-path                  : '../fonts/';
+$img-path					: '../img/';
+
+// Font stacks
+$crimson                    : Crimson-semibold, Georgia,Cambria,"Times New Roman",Times,serif;
+$adelle						: "adelle sans", Arial, sans-serif;
+$alouisius					: Alouisius,Verdana,Geneva,sans-serif;
+$cambria                    : Cambria, Georgia, 'Times New Roman', Times, serif;
+$arial                  	: Arial, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$monospace                  : Monaco, 'Courier New', monospace;
+$ampersand                  : Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+$verdana                    : Verdana, Geneva, sans-serif;
+$lucida-grande              : 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+
+
+$milli-size: .75em;
+$small-size: .8725em; // 13px
+$text-size: .9375em; // 14px
+$default-size: 1em;
+$medium-size: 1.1875em;
+$large-size: 1.4375em;
+$xlarge-size: 1.6em;
+$xxllarge-size: 3.5em;
+
+$h1-size: 2.5em; // 40px @ 16px;
+$h2-size: 2em; // 32px @ 16px:
+$h3-size: 1.75em; // 28px @ 16px;
+$h4-size: 1.5em; // 24px @ 16px;
+$h5-size: 1.25em; // 20px @ 16px;
+$h6-size: 1.125em; // 18px @ 16px;
+
+// =============================================================================
+// SPACING
+// =============================================================================
+$base-font-size    : 16px !default;
+$base-line-height  : 1.5; // ~ 22px @ 16px
+$base-spacing-unit : $base-font-size / 1.6;
+$half-spacing-unit : $base-font-size / 2;
+
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+$xxlarge-max-width: 1070px;
+
+$small: 0; // small
+$medium: 430px; // medium
+$large: 768px; // large
+$xlarge: 1024px; // xlarge
+$xxlarge: 1200px; // xxlarge
+$max: $xxlarge-max-width;
+
+// =============================================================================
+// GRID
+// =============================================================================
+$base-spacing-unit        : 10px;
+$half-spacing-unit        : $base-spacing-unit / 2; // 5px
+$quarter-spacing-unit : $base-spacing-unit / 4; // 2.5px
+$double-spacing-unit      : $base-spacing-unit * 2; // 20px
+
+// gutter
+$gutter              : $base-spacing-unit * 3;
+// cols
+$secondary-col-width : 310px;
+$breaking-news-mobile-height: 206px;
+$breaking-news-height: 565px;
+
+// sizes
+$header-height: 73px;
+$header-height-mobile: 46px;
+
+$stem-width: 62px;
+
+// =============================================================================
+// COLORS
+// =============================================================================
+
+//grayscales
+$black: #000; // should never been used
+$white: #fff;
+$grey-lighter: #f3f3f3;
+$grey-light: #e5e5e5;
+$grey: #ddd;
+$grey-dark: #ccc;
+$grey-darker: #979797;
+$grey-darkest: #5e5e5e;
+$almost-black: #282828;
+$white-broken: #f3f5f6;
+$transparent: transparent;
+
+$white-light: #e5e5e4;
+$white-dark: #ccc;
+
+$bg-color: #F4F6F0;
+$link-color: $black;
+$link-hover-color: $black;
+
+// brand colors
+$vk: $white;
+$vk-dark: $grey;
+$vk-blue: #3F97AA; 
+$topics: #323232;
+$topics-dark: darken($topics, 5%);
+$services: $vk-blue;
+$services-dark: darken($services, 5%);
+
+// social media color;
+$twitter-color: #00aced;
+$facebook-color: #3b5998;
+$google-plus-color: #dd4b39;
+$whats-app-color:   #2daf18;
+$bookmark-color: #f2c650;
+$youtube-color: #bb0000;
+$linkedin-color: #007bb6;
+$instagram-color: #517fa4;
+$pinterest-color: #cb2027;
+$vine-color: #00bf8f;
+$snapchat-color: #fffc00;
+$flickr-color: #ff0084;
+$tumblr-color: #32506d;
+$vimeo-color: #aad450;
+$foursquare-color: #0072b1; 
+
+// normalize colors
+$mark-color: #ff0;
+$fieldset-border-color: #c0c0c0;
+
+// =============================================================================
+// z-index (all z-index defined on one place to keep overview)
+// =============================================================================
+$z-index-header: 890;
+$z-index-identity: $z-index-header + 1;
+$z-index-subnav: $z-index-header - 1;
+$z-index-mobile-icon: $z-index-header + 10;
+$z-index-mobile-menu: $z-index-mobile-icon + 1;
+$z-index-advertising: $z-index-subnav - 1;
+
+$z-index-overlay-close: 900;
+
+// =============================================================================
+// Animation settings
+// =============================================================================
+$default-speed: .3s;
+$slow-speed: 1s;
+$fast-speed: .2s;
+$default-easing: ease-in-out;
+
+$overlay-speed: .5s;
+$spinner-speed: .7s;
+$spinner-delay: $spinner-speed - .2s;
+
+
+// =============================================================================
+// Default z-indexes
+// =============================================================================
+
+$z-index-default: 900;
+$z-index-buttons: $z-index-default + 1;
+$z-index-logo: $z-index-default + 10;
+$z-index-hover: $z-index-default - 1;

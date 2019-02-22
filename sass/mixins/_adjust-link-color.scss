@@ -1,0 +1,42 @@
+// =============================================================================
+// LINK COLOR
+// =============================================================================
+@mixin adjust-link-color($color: $link-color, $hoverColor: $link-color-hover, $visitedColor: $link-color-visited, $textDecoration1: false, $textDecoration2: false, $important: '') {
+	// a11y: links should be underlined by default but in our case that's only in full articles so we add it there
+	// the order of the :pseudo-classes is important for a11y
+	@if $textDecoration1 == true {
+		text-decoration: underline;
+	} @else {
+		text-decoration: none;
+	}
+
+	// we no longer use :link
+	color: $color #{$important};
+
+	&:visited { // UX: visual feedback that you've visited this link before
+		@if $visitedColor != null {
+			color: $visitedColor #{$important};
+		} @else {
+			color: $color #{$important};
+		}
+	}
+
+	&:focus,
+	&:hover {
+		color: $hoverColor #{$important};
+
+		@if $textDecoration2 == true {
+			text-decoration: underline;
+		} @else {
+			text-decoration: none;
+		}
+	}
+
+	&:active {
+		@if $textDecoration2 {
+			text-decoration: none;
+		}
+	}
+
+	@content;
+}

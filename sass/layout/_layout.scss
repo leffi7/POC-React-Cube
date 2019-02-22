@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// LAYOUT
+//
+// This file includes all LAYOUT styles
+//
+// *SMACSS definition:*
+// The major components are referred to as Layout styles.
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ // all includes in alphabetical ordering
+ // except when it's necessary for the cascade (files marked with *)
+
+@import 'cntr';
+@import 'topics';
+@import 'vk';
+@import 'vk-np';
+@import 'services';
+

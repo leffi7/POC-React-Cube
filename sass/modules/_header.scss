@@ -1,0 +1,34 @@
+.main__header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid $grey;
+
+	&.main__header--vk {
+		background-color: $vk;
+		border-top: 20px solid $vk-dark;
+	}
+
+	&.main__header--vk-np {
+		background-color: $vk;
+		border-top: 20px solid $vk-dark;
+		
+		&::after {
+			margin: 10px 0 0 3px;
+			font-size: 20px;
+			content: '+';
+		}
+	}
+
+	&.main__header--topics {
+		background-color: $topics;
+		border-top: 20px solid $topics-dark;
+	}
+
+	&.main__header--services {
+		background-color: $services;
+		border-top: 20px solid $services-dark;
+	}
+}

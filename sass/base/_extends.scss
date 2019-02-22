@@ -1,0 +1,20 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// _EXTENDS.SCSS
+//
+// Placeholders aka Silent Classes
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#placeholders*
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// unstyled lists
+%unstyled-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+%visuallyhidden {
+	@include visuallyhidden;
+}

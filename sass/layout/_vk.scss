@@ -1,0 +1,65 @@
+.latest-articles {
+	@extend %unstyled-list;
+}
+
+.latest-articles__item {
+	border-bottom: 1px solid $grey;
+}
+
+.ankeiler__wrapper-chapeau {
+	position: relative;
+	margin-top: -32px;
+	margin-right: 8px;
+	padding: 16px 8px 16px 16px;
+	background-color: $white;
+	z-index: 2;
+}
+
+.ankeiler__title {
+	margin: 0;
+	font-family: $crimson;
+	font-size: 1.25em;
+	font-style: normal;
+	line-height: 1.1;
+}
+
+.ankeiler__body {
+	padding-top: 8px;
+}
+
+.tag {
+	padding-right: 4px;
+	color: $vk-blue;
+	font-family: $alouisius;
+	font-size: .8125em;
+	font-weight: normal;
+	text-transform: uppercase;
+
+	.ankeiler-teaser__header & {
+		font-size: .6875em;
+	}
+}
+
+.ankeiler-teaser {
+	@include clearfix;
+
+	padding: 10px;
+
+	.ankeiler__title {
+		display: inline;
+		margin-bottom: 0;
+		font-family: $crimson;
+		font-size: 16px;
+	}
+}
+
+.ankeiler-teaser__figure {
+	width: 90px;
+	height: 65px;
+	float: left;
+}
+
+.ankeiler-teaser__header {
+	margin-left: 103px;
+	line-height: 1.3;
+}

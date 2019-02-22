@@ -1,0 +1,15 @@
+// =============================================================================
+// OLD-IE
+// =============================================================================
+
+// styles specific for <IE9
+// use this if you want to output styles in the old-ie.css file and not pollute
+// the default css file with hacks
+// @see https://github.com/jakearchibald/sass-ie
+$old-ie: false !default;
+
+@mixin old-ie {
+	@if $old-ie {
+		@content;
+	}
+}
