@@ -6,6 +6,6 @@
 ## Opmerking
 Project is op bepaald moment stopgezet en niet verder aan ontwikkeld:
 * daardoor komen images er niet meer door en
-* kan app niet meer gebuikd worden via gulp
+* kan app niet meer gebuild worden via gulp
 
-Om de app te bekijken, download je de map '_app' en open je index.html
+Om de app te bekijken in een browser, download je de map '_app' en open je index.html
